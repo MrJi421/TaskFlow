@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task Scheduler Dashboard</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+    /* Add your custom CSS styles here */
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo_TaskFlow" width="100px"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="dash.html">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="create.html">Create Task</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="setting.html">Settings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="account.html">Account</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto text-danger">
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <h2>Upcoming Tasks</h2>
+    <div class="card-deck my-5">
+      <!-- Task cards go here -->
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body bg-info">
+            <h5 class="card-title">Total Upcoming Tasks</h5>
+            <p class="card-text">14</p>
+          </div>
+          <div class="card-footer">
+            <a href="#"><span class="text-info">&gt;&gt;&gt;</span>Manage the Tasks</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Summary</h2>
+    <div class="row mt-4">
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body bg-warning">
+            <h5 class="card-title">Total Tasks</h5>
+            <p class="card-text">10</p>
+          </div>
+          <div class="card-footer">
+            <a href="#"><span class="text-info">&gt;&gt;&gt;</span>Manage the Tasks</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body bg-success">
+            <h5 class="card-title">Completed Tasks</h5>
+            <p class="card-text">5</p>
+          </div>
+          <div class="card-footer">
+            <a href="#"><span class="text-info">&gt;&gt;&gt;</span>Manage the Tasks</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body bg-danger">
+            <h5 class="card-title">Ongoing Tasks</h5>
+            <p class="card-text">5</p>
+          </div>
+          <div class="card-footer">
+            <a href="#"><span class="text-info">&gt;&gt;&gt;</span>Manage the Tasks</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

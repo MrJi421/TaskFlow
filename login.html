@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Login and Signup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url(img/task-bg.jpg);
+      margin: 0;
+      padding: 0;
+    }
+
+    #tabContainer {
+        position: relative;
+        margin: 10%;
+      background-color: #333 transparent;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .tabButton {
+      background-color: #555;
+      border: none;
+      color: #fff;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    .tabButton:hover {
+      background-color: #777;
+    }
+
+    .tabButton.active {
+      background-color: #f8c90b;
+      color: #333;
+    }
+
+    .tabContent {
+      display: none;
+      background-color: rgba(255, 255, 255, 0.4);
+      padding: 20px;
+      margin-top: 10px;
+    }
+    input{
+        margin: 10px;
+        width: 40%;
+        height: 5vh;
+    }
+  </style>
+</head>
+<body>
+        <nav class="navbar navbar-expand-sm bg-warning">
+            <div class="container-fluid nav-brand justify-content-center">
+               <img src="img/logo.png" alt="logo" width="110px" class="text-center">
+            </div>
+        </nav>
+  <div id="tabContainer">
+    <button class="tabButton rounded active" onclick="openTab(event, 'login')">Login</button>
+    <button class="tabButton rounded" onclick="openTab(event, 'signup')">Signup</button>
+  </div>
+  <div id="login" class="tabContent container mt-5 text-center rounded-5" style="display: block;">
+    <h2>Login</h2>
+    <form>
+      <input type="text" placeholder="Username" required>
+      <br>
+      <input type="password" placeholder="Password" required>
+      <br>
+      <a href="dash.html" type="submit" class="btn btn-success">Login
+      </a>
+    </form>
+  </div>
+  <div id="signup" class="tabContent container mt-5 text-center rounded-5">
+    <h2>Signup</h2>
+    <form>
+      <input type="text" placeholder="Username" required>
+      <br>
+      <input type="email" placeholder="Email" required>
+      <br>
+      <input type="password" placeholder="Password" required>
+      <br>
+      <input type="checkbox" id="term" style="width: 15px; height: 16px;"><label for="term">I accept the terms and conditions.</label>
+      <br>
+      <a href="dash.html" type="submit" class="btn btn-success">Signup</a>
+    </form>
+  </div>
+
+  <script>
+    function openTab(evt, tabName) {
+      var i, tabContent, tabButtons;
+      tabContent = document.getElementsByClassName("tabContent");
+      for (i = 0; i < tabContent.length; i++) {
+        tabContent[i].style.display = "none";
+      }
+      tabButtons = document.getElementsByClassName("tabButton");
+      for (i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].classList.remove("active");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.classList.add("active");
+    }
+  </script>
+</body>
+</html>
